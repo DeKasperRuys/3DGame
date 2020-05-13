@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 playerScale;
     public float slideForce = 400;
     public float slideCounterMovement = 0.2f;
-
+    public bool isSliding = false;
     //Jumping
     private bool readyToJump = true;
     private float jumpCooldown = 0.25f;
@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour {
     private void StartCrouch() {
         transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-        if (rb.velocity.magnitude > 0.5f) {
+        if (rb.velocity.magnitude > 0.5f && isSliding==false) {
             if (grounded) {
                 rb.AddForce(orientation.transform.forward * slideForce);
             }
@@ -96,6 +96,7 @@ public class PlayerMovement : MonoBehaviour {
     private void StopCrouch() {
         transform.localScale = playerScale;
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+        isSliding = false;
     }
 
     private void Movement() {
@@ -107,7 +108,7 @@ public class PlayerMovement : MonoBehaviour {
         float xMag = mag.x, yMag = mag.y;
 
         //Counteract sliding and sloppy movement
-        CounterMovement(x, y, mag);
+      //  CounterMovement(x, y, mag);
 
         //If holding jump && ready to jump, then jump
         if (readyToJump && jumping) Jump();
@@ -193,7 +194,7 @@ public class PlayerMovement : MonoBehaviour {
         orientation.transform.localRotation = Quaternion.Euler(0, desiredX, 0);
     }
 
-    private void CounterMovement(float x, float y, Vector2 mag) {
+   /* private void CounterMovement(float x, float y, Vector2 mag) {
         if (!grounded || jumping) return;
 
         //Slow down sliding
@@ -216,7 +217,7 @@ public class PlayerMovement : MonoBehaviour {
             Vector3 n = rb.velocity.normalized * maxSpeed;
             rb.velocity = new Vector3(n.x, fallspeed, n.z);
         }
-    }
+    }*/
 
     /// <summary>
     /// Find the velocity relative to where the player is looking

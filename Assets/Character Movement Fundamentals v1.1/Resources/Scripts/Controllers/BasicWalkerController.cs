@@ -196,8 +196,8 @@ public class BasicWalkerController : MonoBehaviour {
 		if(!IsGrounded())
 			_velocity = _velocityDirection * movementSpeed * airControl;
 
-        if (!IsGrounded() && sprintKeyIsPressed == true)
-            _velocity = _velocityDirection * movementSpeed * airControl * sprintSpeed;
+       /* if (!IsGrounded() && sprintKeyIsPressed == true)
+            _velocity = _velocityDirection * movementSpeed * airControl * sprintSpeed;*/
             
         //If controller is standing (or walking) on a slope, decrease player velocity based on the slope's angle;
         if (currentControllerState == ControllerState.Sliding)
