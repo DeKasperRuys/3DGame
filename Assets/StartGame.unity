@@ -3255,7 +3255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MessagePanel: {fileID: 1401487294}
   camera: {fileID: 2098082703}
-  ray_Range: 10
+  ray_Range: 1
   interact: 101
 --- !u!20 &2098082703 stripped
 Camera:

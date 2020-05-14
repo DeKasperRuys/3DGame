@@ -20,26 +20,9 @@ public class ItemPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, ray_Range))
-        {
-            if (hit.transform.name == "Item")
-            {
-                Debug.Log("swaaag");
-                if (Input.GetKeyDown(interact))
-                {
-                    Destroy(hit.transform.parent.gameObject);
-                }
-            }
-        }
-        */
-
-
-
-
             Ray ray_Cast = camera.ScreenPointToRay(new Vector2(Screen.width /2, Screen.height/2));
             RaycastHit ray_Hit;
-        
+        MessagePanel.SetActive(false);
         if (Physics.Raycast(ray_Cast, out ray_Hit, ray_Range))
             {
             
@@ -50,15 +33,13 @@ public class ItemPickup : MonoBehaviour
                 {
                 Destroy(ray_Hit.collider.gameObject);
                 }
+                
             }
             else
             {
-                MessagePanel.SetActive(false);
+
             }
-            
-        }
-
-
 
         }
+    }
 }
