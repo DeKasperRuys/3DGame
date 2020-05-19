@@ -95,7 +95,7 @@ public class BasicWalkerController : MonoBehaviour {
 	void Update()
 	{
 		HandleJumpKeyInput();
-	}
+    }
 
 	//Handle jump booleans for later use in FixedUpdate;
 	void HandleJumpKeyInput()
@@ -143,8 +143,10 @@ public class BasicWalkerController : MonoBehaviour {
 		//Set mover velocity;		
 		mover.SetVelocity(_velocity);
 
+
+
 		//Store velocity for next frame;
-		savedVelocity = _velocity;
+
 		savedMovementVelocity = _velocity - momentum;
 
 		//Reset jump key booleans;

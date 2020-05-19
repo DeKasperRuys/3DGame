@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
+    //PLAYER CLASS VOOR INVENTORY TUTORIAL
+
+
     public GameObject MessagePanel;
     public Camera camera;
     public float ray_Range = 1f;
     public KeyCode interact;
 
-    //RaycastHit hit;
+    public bool pickedUp;
+
+    //Inventory
+    public InventoryObject inventory;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
@@ -22,7 +28,9 @@ public class ItemPickup : MonoBehaviour
     {
             Ray ray_Cast = camera.ScreenPointToRay(new Vector2(Screen.width /2, Screen.height/2));
             RaycastHit ray_Hit;
+
         MessagePanel.SetActive(false);
+
         if (Physics.Raycast(ray_Cast, out ray_Hit, ray_Range))
             {
             
@@ -31,15 +39,25 @@ public class ItemPickup : MonoBehaviour
              MessagePanel.SetActive(true);
                 if (Input.GetKeyDown(interact))
                 {
-                Destroy(ray_Hit.collider.gameObject);
+                    
+                    GameObject itempickedUp = ray_Hit.collider.gameObject;
+                    var item = itempickedUp.GetComponent<Item>();
+                    if (item)
+                    {
+                        inventory.AddItem(item.item, 1);
+                    }
+                    Destroy(itempickedUp);
                 }
                 
-            }
-            else
-            {
-
             }
 
         }
     }
+
+    private void OnApplicationQuit()
+    {
+        inventory.Container.Clear();
+    }
+
+   
 }
