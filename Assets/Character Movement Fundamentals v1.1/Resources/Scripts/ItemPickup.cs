@@ -9,7 +9,7 @@ public class ItemPickup : MonoBehaviour
 
     public GameObject MessagePanel;
     public Camera camera;
-    public float ray_Range = 1f;
+    public float ray_Range = 3f;
     public KeyCode interact;
 
     public bool pickedUp;

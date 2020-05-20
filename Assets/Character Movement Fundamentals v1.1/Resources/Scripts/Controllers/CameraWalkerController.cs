@@ -8,7 +8,7 @@ using UnityEngine;
 public class CameraWalkerController : BasicWalkerController {
 
 	//Reference to camera controls;
-	CameraController cameraControls;
+	protected CameraController cameraControls;
 
 	protected override void Setup()
 	{
