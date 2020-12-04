@@ -96,7 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 112000000, guid: 8ad99a17f48ad404b8a60147630113e1,
+  m_LightingDataAsset: {fileID: 112000000, guid: e38fb9ddc7471ff4e987c2c314d6059c,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -10589,7 +10589,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1900645726}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11499,8 +11498,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641252615}
-  m_LocalRotation: {x: -0.0019703358, y: 0.9981946, z: -0.044632763, w: -0.040146574}
-  m_LocalPosition: {x: 16.817425, y: -54.158195, z: 208.77483}
+  m_LocalRotation: {x: -0.087770715, y: 0.017929252, z: 0.0015793426, w: 0.9959781}
+  m_LocalPosition: {x: 560.4371, y: -407.8517, z: -502.81595}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 256999854}
@@ -16196,8 +16195,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215797017}
-  m_LocalRotation: {x: 0.00069850666, y: 0.94786274, z: -0.0026041104, w: 0.31866753}
-  m_LocalPosition: {x: -4.61174, y: -43.89968, z: 29.143394}
+  m_LocalRotation: {x: 0.124438524, y: 0.099543445, z: 0.012549058, w: -0.9871417}
+  m_LocalPosition: {x: 560.43646, y: -407.85147, z: -502.81607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 256999854}
@@ -17191,7 +17190,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 465925511}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -17854,7 +17852,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 505242304}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -19486,7 +19483,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1612637542}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -22068,7 +22064,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1867322858}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -26935,7 +26930,6 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1472076362}
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
